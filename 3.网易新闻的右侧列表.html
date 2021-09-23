@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>网易新闻-体育</title>
+</head>
+<link rel="stylesheet" href="./fa/css/all.css">
+<link href="../try/css/reset.css" rel="stylesheet">
+
+<style>
+    /*.icon {*/
+    /*    width: 1em; height: 1em;*/
+    /*    vertical-align: -0.15em;*/
+    /*    fill: currentColor;*/
+    /*    overflow: hidden;*/
+    /*}*/
+    /*去除默认下划线*/
+    a{
+        text-decoration: none;
+    }
+    /*设置整体容器样式*/
+    .news-wrapper{
+        width: 300px;
+        height: 324px;
+        margin: 50px auto;
+        padding-bottom:27px ;
+        background-color: oldlace;
+        /* 设置上边框 */
+        border-top: 1px solid #ddd;
+    }
+    /*设置标题容器样式*/
+    .news-title{
+        /* 为了边框和文字宽度一致，需要将h2转换为行内块元素 */
+        display: inline-block;
+        height: 30px;
+        font-size: 16px;
+        /* 设置上边框  */
+        border-top: 1px red solid;
+        /* 通过margin-top将h2上移，盖住上边框 */
+        margin-top: -1px;
+        padding-top: 10px;
+    }
+    /*标题内容样式*/
+    .news-title a{
+        font-family: "Microsoft YaHei UI",sans-serif;
+        color: #40406B;
+        font-weight: bold;
+    }
+    /* 设置图片容器的高度  */
+    .news-img{
+        height: 150px;
+    }
+    /* 设置图片的文字效果 */
+    .news-img .img-title{
+        margin-top: -30px;
+        /*display: table;*/
+        /* 设置字体颜色 */
+        color: #fff;
+        font-size: 16px;
+        font-weight: bold;
+        padding-left: 30px;
+    }
+    /* 设置新闻列表 */
+    .news-list{
+        margin-top: 20px;
+    }
+    .news-list .news-item{
+        height: 30px;
+    }
+
+    /*设置li 中文字*/
+    li a{
+        font-family: '宋体',"Microsoft YaHei UI",sans-serif;
+        font-size: 14px;
+        color: #666666;
+        /*margin-bottom: 17px;*/
+        margin: -1px 0 0;
+        padding: 6px 0 10px;
+    }
+    /*设置li 前的图标*/
+    .news-item:before{
+        content: '◼';
+        /*font-family:'Font Awesome 5 Solid','Font Awesome 5 Free', 'Font Awesome 5 Brands','Font Awesome 5 Regular',serif;*/
+        color: #dddddd;
+        font-size:10px ;
+    }
+    /*设置鼠标移入效果*/
+    ul a:hover{
+        color: red;
+    }
+
+</style>
+<script src="//at.alicdn.com/t/font_2767900_d39nq4o3qgk.js"></script>
+
+<body>
+<!--新闻列表外部容器-->
+<div class="news-wrapper">
+<!--    创建一个标题标签-->
+    <h2 class="news-title">
+        <a href="javascript:">体育</a>
+    </h2>
+<!--    新闻图片容器-->
+    <div class="news-img">
+        <a href="javascript:">
+            <img src="../exercise/img/03/1.jpeg" alt="费德勒">
+            <h3 class="img-title">费德勒首负迪米 扶额头不满发挥</h3>
+        </a>
+    </div>
+
+<!--    新闻列表-->
+    <ul class="news-list">
+        <li class="news-item">
+            <a href="javascript:">乔治:我爱LA 喜欢和LBJ一起打球</a>
+        </li>
+        <li class="news-item">
+            <a href="javascript:">格林:3年前降薪就在等KD 特制T恤嘲讽LBJ</a>
+        </li>
+        <li class="news-item">
+            <a href="javascript:">塔克4000双鞋让保罗羡慕嫉妒 乔丹被震惊</a>
+        </li>
+        <li class="news-item">
+            <a href="javascript:">CBA下季新赛制:常规赛4组循环 增至46轮</a>
+        </li>
+    </ul>
+<!--    <svg class="icon" aria-hidden="true">-->
+<!--        <use xlink:href="#icon-pengyouquan"></use>-->
+<!--    </svg>-->
+
+</div>
+</body>
+</html>

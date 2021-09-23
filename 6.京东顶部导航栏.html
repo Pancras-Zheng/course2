@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>6.京东顶部导航栏</title>
+</head>
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="fa/css/all.css">
+<style>
+    a{
+        text-decoration: none;
+        color: #999999;
+        font-size: 12px;
+    }
+    /*.clearfix::before,*/
+    /*.clearfix::after{*/
+    /*    content: '';*/
+    /*    display: table;*/
+    /*    clear: both;*/
+    /*}*/
+    /*外部包裹容器*/
+    .top-bar-wrapper{
+        width: 1440px;
+        height: 31px;
+        background-color: #E3E4E5;
+    }
+    /*导航栏的样式*/
+    .top-bar{
+        width: 1190px;
+        height: 30px;
+        margin: 0 auto;
+        position: relative;
+
+    }
+    /*定位菜单的样式*/
+    .location{
+        width: 58px;
+        float: left;
+        /*background-color: red;*/
+    }
+    /*当前城市的样式*/
+    .current-city{
+        position: relative;
+    }
+    /*定位icon的样式*/
+    .location i{
+        color: #f10215;
+        font-size: 13px;
+        margin-left: 2px;
+        margin-right: 2px;
+    }
+    /*当前所选的城市样式*/
+    .location a{
+        line-height: 30px;
+    }
+    /*选择城市的下拉菜单*/
+    .city-list{
+        width: 322px;
+        height: 448px;
+        background-color: #fdfdfd;
+        border: 1px solid rgb(204, 204, 204);
+        position: absolute;
+        top: 31px;
+        display: none;
+        z-index: 99;
+
+    }
+
+    /*鼠标移入显示可选地区菜单*/
+    .location:hover .city-list{
+        display: block;
+
+    }
+    .location:hover .current-city{
+        background-color: #fdfdfd;
+        border: 1px solid rgb(204, 204, 204);
+        border-bottom: none;
+        height: 31px;
+        z-index: 9999;
+    }
+
+    /*可选地区菜单样式*/
+    /*鼠标移入的地区高亮*/
+    .location .select-location a:not(nth-child):hover{
+        color:  #f10215;
+    }
+    /*已选中的地区默认样式*/
+    .city-list li:first-child a{
+           background-color: #f10215;
+           color: #fdfdfd;
+    }
+     /*候选城市的排列样式*/
+     .city-list li{
+         float: left;
+         margin: 8px 10px 0 8px;
+     }
+
+
+    /*右侧第一个菜单的样式*/
+    .shortcut li:first-child{
+        margin-left: 409px;
+        line-height: 26px;
+    }
+    /*右侧菜单水平布局*/
+    .shortcut li{
+        float: left;
+        margin-left: 8px;
+        line-height: 26px;
+    }
+
+/*    高亮*/
+    .sign-up a, .company-procurement a{
+        color: #f10215;
+
+    }
+
+    /*    加|伪元素*/
+    .my-order ::after,
+    .my-jd i::after,
+    .jd-membership ::after,
+    .company-procurement i::after,
+    .customer-service i::after,
+    .web-navigation i::after,
+    .my-order ::after,
+    .sign-up::after{
+        content: '|';
+        color: #cccc;
+        font-size: 20%;
+        padding-left: 14px;
+
+    }
+    i{
+        font-size: 10px;
+        color: #999999;
+    }
+
+/*    鼠标移入高亮*/
+    .login a:hover,
+    .my-order a:hover,
+    .my-jd a:hover,
+    .jd-membership a:hover{
+        color: #f10215;
+    }                  
+
+</style>
+<body>
+<!--创建外部容器-->
+    <nav class="top-bar-wrapper">
+<!--        内部容器-->
+        <div class="top-bar clearfix">
+<!--            定位菜单-->
+            <div class="location">
+                <div class="current-city">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <a href="#">北京</a>
+                </div>
+<!--            省市列表-->
+            <ul class="city-list">
+            <li class="select-location">
+                <a href="#">北京</a></li>
+            <li class="select-location">
+                <a href="#">上海</a></li>
+            <li class="select-location">
+                <a href="#">天津</a></li>
+            <li class="select-location">
+                <a href="#">重庆</a></li>
+            <li class="select-location">
+                <a href="#">河北</a></li>
+
+            <li class="select-location">
+                <a href="#">山西</a></li>
+            <li class="select-location">
+                <a href="#">河南</a></li>
+            <li class="select-location">
+                <a href="#">辽宁</a></li>
+            <li class="select-location">
+                <a href="#">吉林</a></li>
+            <li class="select-location">
+                <a href="#">黑龙江</a></li>
+            <li class="select-location">
+                <a href="#">内蒙古</a></li>
+            <li class="select-location">
+                <a href="#">江苏</a></li>
+            <li class="select-location">
+                <a href="#">山东</a></li>
+            <li class="select-location">
+                <a href="#">安徽</a></li>
+            <li class="select-location">
+                <a href="#">浙江</a></li></ul>
+            </div>
+<!--            右侧的菜单-->
+            <ul class="shortcut">
+            <li class="login">
+                <a href="#" >你好，请登录</a></li>
+            <li class="sign-up">
+                <a href="#">免费注册</a></li>
+            <li class="my-order">
+                <a href="#">我的订单</a></li>
+            <li class="my-jd">
+                <a href="#">我的京东</a>
+                <i class="fas fa-angle-down"></i></li>
+            <li class="jd-membership">
+                <a href="#">京东会员</a></li>
+            <li class="company-procurement">
+                <a href="#">企业采购</a>
+                <i class="fas fa-angle-down"></i></li>
+            <li class="customer-service">
+                <a href="#">客户服务</a>
+                <i class="fas fa-angle-down"></i></li>
+            <li class="web-navigation">
+                <a href="#">网站导航</a>
+                <i class="fas fa-angle-down"></i></li>
+            <li class="phone-jd">
+                <a href="#">手机京东</a></li>
+            </ul>
+        </div>
+    </nav>
+</body>
+</html>

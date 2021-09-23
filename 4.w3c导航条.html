@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>W3C导航条</title>
+</head>
+<link href="css/reset.css" rel="stylesheet">
+<style>
+    a{
+        text-decoration: none;
+    }
+    .nav-wrapper{
+        width: 1210px;
+        height: 48px;
+        background-color: #e6e5e1;
+        margin: 100px auto;
+    }
+    .item{
+        display: inline-block;
+        /*margin: 0 30px;*/
+    }
+    .item a{
+        color: #767676;
+        font-family: "SF Pro SC","SF Pro Text","SF Pro Icons","PingFang SC", Verdana, Arial, '微软雅黑','宋体',serif;
+        font-size: 16px;
+        line-height: 48px;
+        padding: 0 39px;
+    }
+    nav .item:last-child a{
+        padding: 0 54px 0 50px;
+    }
+    ul :hover{
+        color: #e6e5e1;
+        background-color: #282c34;
+    }
+</style>
+<body>
+    <nav class="nav-wrapper">
+        <ul class="menu">
+            <li class="item">
+                    <a href="#">HTML/CSS</a></li>
+            <li class="item">
+                <a href="#">Browser Side</a></li>
+            <li class="item">
+                <a href="#">Server Side</a></li>
+            <li class="item">
+                <a href="#">Programming</a></li>
+            <li class="item">
+                <a href="#">XML</a></li>
+            <li class="item">
+                <a href="#">Web Building</a></li>
+            <li class="item">
+                <a href="#">Reference</a></li>
+        </ul>
+    </nav>
+</body>
+</html>

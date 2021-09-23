@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>京东页面的图片列表</title>
+</head>
+<script></script>
+<link href="css/reset.css" rel="stylesheet">
+<style>
+    body{
+        background-color:honeydew;
+    }
+    .img-list {
+        width: 190px;
+        height: 470px;
+        margin: 50px auto;
+        background-color: #1bc4fb;
+        overflow: hidden;
+    }
+
+    .img-list img{
+        width: 100%;
+    }
+    .img-list li:not(:last-child){
+        margin-bottom: 9px;
+    }
+</style>
+<body>
+    <ul class="img-list">
+        <li>
+            <a href="javascript:">
+                <img src="../exercise/img/01/1.jpg" alt="img1">
+            </a>
+        </li>
+        <li>
+            <a href="https://www.baidu.com">
+            <img src="../exercise/img/01/2.jpg" alt="img2">
+            </a>
+        </li>
+        <li>
+            <a href="javascript:">
+            <img src="../exercise/img/01/3.jpg" alt="img3">
+            </a>
+        </li>
+    </ul>
+</body>
+</html>
